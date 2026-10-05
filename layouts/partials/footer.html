@@ -13,31 +13,31 @@
           </ul>
         </div>
 
-        {{ $lang := .Site.Language.Lang }}
-        {{ $activities := index .Site.Data $lang }}
-        {{ $activitiesData := cond (eq $lang "es") $activities.acciones $activities.activities }}
         <div class="col-sm-3 col-md-3 col-lg-3">
-          <h3 class="mt-2 mb-2" >{{ $activitiesData.title }}</h3>
+          <h3>{{ .Site.Params.footerServiceTitle }}</h3>
           <ul>
-            {{ range $activitiesData.item }}
-              <li><a href="{{ .link | default "#" }}">{{ .title }}</a></li>
+            {{ range .Site.Menus.service }}
+            <li>
+                <a href="{{ .URL | absLangURL }}">{{ i18n .Name }}</a>
+            </li>
             {{ end }}
           </ul>
         </div>
 
-        {{ $resources := index .Site.Data $lang }}
-        {{ $resourcesData := cond (eq $lang "es") $resources.recursos $resources.resources }}
-        <div class="col-sm-3 col-md-3 col-lg-2 pr-0">
-          <h3 class="mt-2 mb-2" >{{ $resourcesData.title }}</h3>
+        <div class="col-sm-3 col-md-3 col-lg-3">
+          <h3>{{ .Site.Params.footerQuicklinkTitle }}</h3>
           <ul>
-            {{ range $resourcesData.item }}
-              <li><a href="{{ .link | absLangURL }}">{{ .title }}</a></li>
+            {{ range .Site.Menus.quicklink }}
+            <li>
+                <a href="{{ .URL | absLangURL }}">{{ i18n .Name }}</a>
+            </li>
             {{ end }}
           </ul>
         </div>
 
         <div class="col-sm-3 col-md-3 col-lg-3 text-right">
           <img src="{{ "images/logos/banner-urjc.png" | absURL }}" alt="Logo Blanco" style="max-width: 300px; height: auto;">
+          {{ $lang := .Site.Language.Lang }}
           {{ $contact := cond (eq $lang "es") .Site.Params.contacto .Site.Params.contact }}
           {{ with $contact }}
           <ul class="list-inline footer-social">

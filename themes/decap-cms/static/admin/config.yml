@@ -5,6 +5,41 @@ locale: es
 media_folder: static
 public_folder: /
 collections:
+  - name: 'navigation'
+    label: 'Menús'
+    files:
+      - file: 'config/_default/menus.yml'
+        name: 'menus'
+        label: 'Menús'
+        fields:
+          - widget: list
+            name: nav
+            label: Elementos del menú
+            required: true
+            hint: '↑ Aparecen en la cabecera de la web'
+            fields:
+              - { label: 'Anidar de', name: 'parent', widget: string, required: false, hint: 'Campo "nombre" del elemento del que anidará' }
+              - { label: 'Nombre', name: 'name', widget: string, required: true }
+              - { label: 'Dirección URL', name: 'url', widget: string, required: true }
+              - { label: 'Prioridad', name: 'weight', widget: number, value_type: int, required: true, min: 1, hint: 'Menor valor es mayor prioridad' }
+          - widget: list
+            name: service
+            label: Servicios
+            required: true
+            hint: '↑ Aparecen en el faldón de la web'
+            fields:
+              - { label: 'Nombre', name: 'name', widget: string, required: true }
+              - { label: 'Dirección URL', name: 'url', widget: string, required: true }
+              - { label: 'Prioridad', name: 'weight', widget: number, value_type: int, required: true, min: 1, hint: 'Menor valor es mayor prioridad' }
+          - widget: list
+            name: quicklink
+            label: Enlaces rápidos
+            required: true
+            hint: '↑ Aparecen en el faldón de la web'
+            fields:
+              - { label: 'Nombre', name: 'name', widget: string, required: true }
+              - { label: 'Dirección URL', name: 'url', widget: string, required: true }
+              - { label: 'Prioridad', name: 'weight', widget: number, value_type: int, required: true, min: 1, hint: 'Menor valor es mayor prioridad' }
   - label: 'Blog'
     name: 'blog'
     folder: 'content/blog'
