@@ -40,6 +40,39 @@ collections:
               - { label: 'Nombre', name: 'name', widget: string, required: true }
               - { label: 'Dirección URL', name: 'url', widget: string, required: true }
               - { label: 'Prioridad', name: 'weight', widget: number, value_type: int, required: true, min: 1, hint: 'Menor valor es mayor prioridad' }
+
+      - file: 'data/es/carrusel.yml'
+        name: 'carrusel'
+        label: 'Carrusel'
+        fields:
+          - { widget: boolean, label: 'Activado', name: 'enable' }
+          - { widget: string, label: 'Sobretítulo', name: 'topTitle' }
+          - { widget: string, label: 'Título', name: 'title' }
+          - widget: list
+            name: 'item'
+            label: 'Elementos'
+            fields:
+              - { widget: string, label: 'Icono', name: 'icon', hint: 'fas + nombre del icono de Font Awesome. Lista: https://fontawesome.com/search?ic=free-collection' }
+              - { widget: string, label: 'Título', name: 'title' }
+              - { widget: string, label: 'Enlace', name: 'link' }
+              - { widget: richtext, label: 'Descripción', name: 'description' }
+
+      - file: 'data/es/recursos.yml'
+        name: 'recursos'
+        label: 'Recursos'
+        fields:
+          - { widget: boolean, label: 'Activado', name: 'enable' }
+          - { widget: string, label: 'Sobretítulo', name: 'topTitle' }
+          - { widget: string, label: 'Título', name: 'title' }
+          - widget: list
+            name: 'item'
+            label: 'Elementos'
+            fields:
+              - { widget: string, label: 'Icono', name: 'icon', hint: 'fas + nombre del icono de Font Awesome. Lista: https://fontawesome.com/search?ic=free-collection' }
+              - { widget: string, label: 'Título', name: 'title' }
+              - { widget: string, label: 'Enlace', name: 'link' }
+              - { widget: richtext, label: 'Descripción', name: 'description' }
+
   - label: 'Blog'
     name: 'blog'
     folder: 'content/blog'
