@@ -8,6 +8,53 @@ collections:
   - name: 'navigation'
     label: 'Menús'
     files:
+      - file: 'config/_default/params.yml'
+        name: 'params'
+        label: 'Configuración'
+        fields:
+          - { widget: string, name: 'home', label: 'Título enlace portada' }
+          - { widget: boolean, name: 'menufixed', label: 'Fijar el menú' }
+          - { widget: string, name: 'footerBlogTitle', label: 'Título blog faldón' }
+          - { widget: string, name: 'footerServiceTitle', label: 'Título servicios faldón' }
+          - { widget: string, name: 'footerQuicklinkTitle', label: 'Título enlaces rápidos faldón' }
+          - widget: object
+            name: 'hero'
+            label: 'Destacado (módulo)'
+            fields:
+              - { widget: boolean, name: 'enable', label: 'Activado' }
+              - { widget: string, name: 'heading', label: 'Titular' }
+              - { widget: text, name: 'description', label: 'Descripción' }
+              - { widget: boolean, name: 'button', label: 'Botón' }
+              - { widget: string, name: 'btnText', label: 'Texto del botón' }
+              - { widget: string, name: 'btnURL', label: 'URL del botón' }
+              - { widget: string, name: 'videoURL', label: 'URL del vídeo' }
+          - widget: object
+            name: 'blog'
+            label: 'Blog (módulo)'
+            fields:
+              - { widget: boolean, name: 'enable', label: 'Activado' }
+              - { widget: string, name: 'topTitle', label: 'Sobretítulo' }
+              - { widget: string, name: 'title', label: 'Título' }
+          - widget: object
+            name: 'contacto'
+            label: 'Contacto (módulo)'
+            fields:
+              - { widget: boolean, name: 'enable', label: 'Activado' }
+              - { widget: string, name: 'topTitle', label: 'Sobretítulo' }
+              - { widget: string, name: 'title', label: 'Título' }
+              - { widget: text, name: 'subtitle', label: 'Subtítulo' }
+              - { widget: text, name: 'address', label: 'Dirección' }
+              - { widget: string, name: 'email', label: 'Correo-e' }
+              - { widget: string, name: 'x', label: 'URL al perfil de X', required: false }
+              - { widget: string, name: 'mastodon', label: 'URL al perfil de Mastodon', required: false }
+              - { widget: string, name: 'telegram', label: 'URL al perfil de Telegram', required: false }
+              - { widget: string, name: 'instagram', label: 'URL al perfil de Instagram', required: false }
+              - { widget: string, name: 'gitlab', label: 'URL al perfil de GitLab.com', required: false }
+              - { widget: hidden, name: 'rss', label: 'URL a la fuente de noticias', default: /index.xml }
+              - { widget: number, value_type: float, name: 'mapLatitude', label: 'Latitud' }
+              - { widget: number, value_type: float, name: 'mapLongitude', label: 'Longitud' }
+              - { widget: hidden, name: 'mapMarker', label: 'Marcador del mapa', default: '/contact/marker.png' }
+
       - file: 'config/_default/menus.yml'
         name: 'menus'
         label: 'Menús'

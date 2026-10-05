@@ -1,0 +1,42 @@
+logo: images/logos/banner-urjc.png
+home: Inicio
+menufixed: true
+footerBlogTitle: Blog
+footerServiceTitle: Editorial
+footerQuicklinkTitle: Políticas
+hero:
+  enable: true
+  heading: La OfiLibre en dos minutos
+  description: En la OfiLibre queremos ayudar a la comunidad universitaria a
+    comprender la cultura libre, la publicación libre, los datos abiertos y el
+    software libre. Para ello nos dedicamos a explicar qué son, cómo funcionan,
+    qué características tienen, y qué beneficios pueden producir, de forma que
+    cualquiera pueda decidir cómo le conviene relacionarse con ellos.
+  button: true
+  btnText: Saber más
+  btnURL: ofilibre
+  videoURL: https://tv.urjc.es/iframe/5d022dedd68b14cb308b6ae5
+blog:
+  enable: true
+  topTitle: Últimos artículos publicados
+  title: Blog
+contacto:
+  enable: true
+  topTitle: Déjanos un mensaje
+  title: Contacto
+  subtitle:
+    La OfiLibre es una iniciativa que trata de contar con la participación
+    de toda la comunidad universitaria para que, entre todos, podamos encontrar
+    nuestro camino en el mundo del conocimiento y la cultura libres.
+  address: Despacho 005, planta baja edificio Rectorado. C/ Tulipán s/n, 28933
+    Móstoles (Madrid)
+  email: ofilibre@urjc.es
+  x: https://x.com/OfiLibreURJC
+  mastodon: https://floss.social/@OfiLibreURJC
+  telegram: https://t.me/ofilibreurjc
+  instagram: https://www.instagram.com/ofilibreurjc/
+  gitlab: https://gitlab.etsit.urjc.es/ofilibre
+  rss: /index.xml
+  mapLatitude: "40.337887"
+  mapLongitude: "-3.874810"
+  mapMarker: /contact/marker.png
