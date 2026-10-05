@@ -23,11 +23,11 @@ nav:
     weight: 2
   - parent: propuestas
     name: Nuevas monografías
-    url: propuestas/nuevas-monografias
+    url: editorial/nuevas-monografias
     weight: 1
   - parent: propuestas
     name: Políticas editoriales
-    url: /propuestas/politicas-editoriales
+    url: /editorial/politicas-editoriales
     weight: 2
   - name: blog
     url: blog/
