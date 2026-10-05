@@ -62,6 +62,7 @@ collections:
           - widget: list
             name: nav
             label: Elementos del menú
+            summary: '{{fields.name}}'
             required: true
             hint: '↑ Aparecen en la cabecera de la web'
             fields:
@@ -72,6 +73,7 @@ collections:
           - widget: list
             name: service
             label: Servicios
+            summary: '{{fields.name}}'
             required: true
             hint: '↑ Aparecen en el faldón de la web'
             fields:
@@ -81,6 +83,7 @@ collections:
           - widget: list
             name: quicklink
             label: Enlaces rápidos
+            summary: '{{fields.title}}'
             required: true
             hint: '↑ Aparecen en el faldón de la web'
             fields:
@@ -98,6 +101,7 @@ collections:
           - widget: list
             name: 'item'
             label: 'Elementos'
+            summary: '{{fields.title}}'
             fields:
               - { widget: string, label: 'Icono', name: 'icon', hint: 'fas + nombre del icono de Font Awesome. Lista: https://fontawesome.com/search?ic=free-collection' }
               - { widget: string, label: 'Título', name: 'title' }
@@ -114,6 +118,7 @@ collections:
           - widget: list
             name: 'item'
             label: 'Elementos'
+            summary: '{{fields.title}}'
             fields:
               - { widget: string, label: 'Icono', name: 'icon', hint: 'fas + nombre del icono de Font Awesome. Lista: https://fontawesome.com/search?ic=free-collection' }
               - { widget: string, label: 'Título', name: 'title' }
