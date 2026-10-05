@@ -5,8 +5,8 @@ locale: es
 media_folder: static
 public_folder: /
 collections:
-  - name: 'navigation'
-    label: 'Menús'
+  - name: 'settings'
+    label: 'Configuraciones'
     files:
       - file: 'config/_default/params.yml'
         name: 'params'
