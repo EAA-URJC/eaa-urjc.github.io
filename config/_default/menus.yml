@@ -19,7 +19,7 @@ nav:
     url: editorial/declaracion-de-principios
     weight: 4
   - name: propuestas
-    url: propuestas/
+    url: editorial/
     weight: 2
   - parent: propuestas
     name: Nuevas monografías
