@@ -83,7 +83,7 @@ collections:
           - widget: list
             name: quicklink
             label: Enlaces rápidos
-            summary: '{{fields.title}}'
+            summary: '{{fields.name}}'
             required: true
             hint: '↑ Aparecen en el faldón de la web'
             fields:
