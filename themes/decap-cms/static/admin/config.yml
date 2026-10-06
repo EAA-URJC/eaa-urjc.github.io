@@ -125,8 +125,9 @@ collections:
               - { widget: string, label: 'Enlace', name: 'link' }
               - { widget: richtext, label: 'Descripción', name: 'description' }
 
-  - label: 'Blog'
-    name: 'blog'
+  - name: 'blog'
+    label: 'Blog'
+    label_singular: 'entrada de blog'
     folder: 'content/blog'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
@@ -143,8 +144,9 @@ collections:
       - { label: 'Logo', name: 'image', widget: 'image', default: '/logos/logo-ofilibre-2025.jpg'}
       - { label: 'Cuerpo', name: 'body', widget: 'richtext' }
 
-  - label: 'Editorial'
-    name: 'editorial'
+  - name: 'editorial'
+    label: 'Editorial'
+    label_singular: 'página de la editorial'
     folder: 'content/editorial'
     create: true
     slug: '{{slug}}'
