@@ -69,7 +69,7 @@ jobs:
       - name: Build
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/.cache/hugo
-          HUGO_ENVIRONMENT: production
+          HUGO_ENVIRONMENT: development # FIXME
         run: |
           echo "Building the project..."
           hugo \
